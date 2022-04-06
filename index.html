@@ -1,0 +1,94 @@
+<!-- Pseudocode:
+
+need to do: 
+
+2. make index for current time
+3. add bootstrap links
+4. create form for user data (bootstrap) 
+5. include bootstap table that has columns
+6. make sure everything aligns w/ javascript and jquery
+
+1. use jquery to capture form inputs once submitted
+2. include a select and save reference to interact with variable
+3. add event listener to form
+4. create 2 functions to capture values
+
+1. print project data to page - make function
+2. create table row (var)
+3. create table detail (correspond to table comlum from task 1)
+4. use moment.js to calculate different in due date and current date
+5. create function to calculate estimated total earn
+6. append elements to table row 
+
+1. make a delete button to remove project rows-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./assets/style.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+    <script
+      type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"
+    ></script>
+  <script
+  src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous">
+</script>
+<link rel="stylesheet" href="./assets/style.css" />
+    <title>Project Tracker</title>
+  </head>
+
+  <body>
+  
+        <p id="time"> time</p>
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Project Tracker</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="#">Features</a>
+            <a class="nav-link" href="#">Pricing</a>
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          </div>
+        </div>
+      </nav>
+
+      <form>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Project name</label>
+          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlSelect1">Project Type</label>
+          <select class="form-control" id="exampleFormControlSelect1">
+            <option>Homework</option>
+            <option>Refactoring</option>
+            <option>Mini Project</option>
+            <option>Code Drills</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">Hourly Wage</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+        <div id="datepicker">Project Due Date</div>
+      </form>
+
+
+
+      <script src="./assets/script.js">  </script>
+  </body>
+
+  
+
+</html>
